@@ -1,0 +1,40 @@
+{
+    "campeonato": [
+        {
+            "id": 1,
+            "title": "Campeonato GT3",
+            "description": "Campeonato GT3 con carreras al sprint de duración máxima de 1 hora y parada en boxes obligatoria, con clasificación a 1 vuelta. ",
+            "img": "../public/image/img4.png",
+            "destacado": "si"
+        },
+        {
+            "id": 2,
+            "title": "Bloqueado",
+            "description": "",
+            "img": "../public/image/img2.png",
+            "destacado": ""
+        },
+        {
+            "id": 3,
+            "title": "Resistencia",
+            "description": "Campeonato de resistencia con diferentes duraciones de carrera, desde el mínimo que serían 3 horas hasta 24 horas.",
+            "destacado": "si"
+        },
+        
+        {
+            "id": 4,
+            "title": "Campeontato de España",
+            "description": ""
+        },
+        {
+            "id": 5,
+            "title": "Campeonato de Francia",
+            "description": ""
+        },
+        {
+            "id": 6,
+            "title": "Campeonato Internacional",
+            "description": ""
+        }
+    ]
+}
