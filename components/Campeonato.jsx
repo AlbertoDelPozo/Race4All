@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import CountDown from "./CountDown";
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/campeonatos");
+  const res = await fetch("https://race4-all.vercel.app/api/campeonatos");
   const championships = await res.json();
 
   return {
@@ -23,7 +23,7 @@ function Campeonato({ championships }) {
   const [campeonatos, setCampeonatos] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/campeonatos")
+    fetch("https://race4-all.vercel.app/api/campeonatos")
       .then((res) => res.json())
       .then((data) => setCampeonatos(data));
   }, []);
