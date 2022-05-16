@@ -1,20 +1,33 @@
-import Typography from "@mui/material/Typography";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import Button from "@mui/material/Button";
-import PersonIcon from "@mui/icons-material/Person";
-import Stack from "@mui/material/Stack";
 import Link from "next/link";
+import Image from "next/image";
+
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
+import Avatar from "@mui/material/Avatar";
 import Container from "@mui/material/Container";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Image from "next/image";
+
+import PersonIcon from "@mui/icons-material/Person";
+import LogoutIcon from "@mui/icons-material/Logout";
+
 import Logo from "../public/image/Logo_white.png";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faDiscord,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+
+import { useUser } from "@auth0/nextjs-auth0";
+
 function Header() {
+  const { user } = useUser();
   return (
-    <Box style={{ position: "sticky", top: 0 }}>
+    <Box style={{ position: "sticky", top: 0, zIndex: 1 }}>
       <AppBar elevation={0}>
         <Container maxWidth="xxl">
           <Toolbar>
@@ -36,7 +49,8 @@ function Header() {
                 height={100}
               />
               <Typography variant="h6" component="ol" color="terciary">
-                <Link underline="hover" href="/">
+                <Link underline="hover" href="/" passHref>
+                  {/* <FontAwesomeIcon icon={faGasPump} /> Introducir para la versión móvil  */}
                   {"Home"}
                 </Link>
               </Typography>
@@ -44,7 +58,7 @@ function Header() {
                 <Link href="/campeonatos">Campeonatos</Link>
               </Typography>
               <Typography variant="h6" component="ol" color="terciary">
-                <Link href="/nosotros">Nosotros</Link>
+                <Link href="/regulations">Nosotros</Link>
               </Typography>
             </Stack>
             <Stack
@@ -57,21 +71,35 @@ function Header() {
               display="flex"
               alignItems="center"
             >
-              <Link href="https://twitter.com/race4alloficial">
-                <TwitterIcon></TwitterIcon>
+              <Link href="https://twitter.com/race4alloficial" passHref>
+                <FontAwesomeIcon icon={faTwitter} />
               </Link>
-
-              <InstagramIcon></InstagramIcon>
-              <div>Discord</div>
-              <Link href="/login">
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  startIcon={<PersonIcon />}
-                >
-                  Perfil
-                </Button>
-              </Link>
+              <FontAwesomeIcon icon={faInstagram} />
+              <FontAwesomeIcon icon={faDiscord} />
+              {user && (
+                <>
+                  <Link href="/profile" passHref>
+                    <Avatar alt="Cindy Baker" src={user.picture} />
+                  </Link>
+                </>
+              )}
+              {user && (
+                <Link href="/api/auth/logout" passHref>
+                  {/* <LogoutIcon></LogoutIcon> */}
+                  <LogoutIcon />
+                </Link>
+              )}
+              {!user && (
+                <Link href="/api/auth/login" passHref>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    startIcon={<PersonIcon />}
+                  >
+                    Perfil
+                  </Button>
+                </Link>
+              )}
             </Stack>
           </Toolbar>
         </Container>

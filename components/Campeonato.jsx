@@ -7,13 +7,23 @@ import GT3Normal from "../public/image/img4.png";
 import ResistenciaImg from "../public/image/img2.jpg";
 import Bloqueado from "../public/image/img5.png";
 import { useState, useEffect } from "react";
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
+import CountDown from "./CountDown";
 
-function Campeonato() {
+export async function getStaticProps() {
+  const res = await fetch("http://localhost:3000/api/campeonatos");
+  const championships = await res.json();
+
+  return {
+    props: championships,
+  };
+}
+
+function Campeonato({ championships }) {
   const [campeonatos, setCampeonatos] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/campeonato")
+    fetch("http://localhost:3000/api/campeonatos")
       .then((res) => res.json())
       .then((data) => setCampeonatos(data));
   }, []);
@@ -34,13 +44,18 @@ function Campeonato() {
       style={{ height: "79vh" }}
     >
       {campeonatosDestacados.map((campeonato) => (
-        <Link href={`/campeonatos/${encodeURIComponent(campeonato.id)}`}>
+        <Link
+          href={`/campeonatos/${encodeURIComponent(campeonato.id)}`}
+          key={campeonato.id}
+          passHref
+        >
           <Card
             style={{ maxWidth: "40vh", border: "none", boxShadow: "none" }}
+            variant="outlined"
             key={campeonato.id}
           >
             <CardContent>
-              <Typography variant="h4" align="center" mb={3}>
+              <Typography variant="h3" align="center" mb={3}>
                 {campeonato.title}
               </Typography>
               <Typography
@@ -57,16 +72,26 @@ function Campeonato() {
                   height={168}
                 />
               </Typography>
-              <Typography variant="body1" align="center">
+              <Typography variant="h6" align="center">
                 {campeonato.description}
               </Typography>
-              <Stack display="flex" alignItems="center" justifyContent="center" mt={10}>
-                <Button variant="outlined" color="secondary">
+              <Stack
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                mt={5}
+              >
+                <Button variant="contained" color="secondary">
                   Participa
                 </Button>
               </Stack>
+
+              <Typography variant="h5" align="center" mt={5}>
+                <CountDown></CountDown>
+              </Typography>
             </CardContent>
           </Card>
+          {/* <CampeonatoComponent id={campeonato.id} title={campeonato.title} description={campeonato.description} imgUrl={imgCampeonatos}></CampeonatoComponent> */}
         </Link>
       ))}
     </Stack>

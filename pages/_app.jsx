@@ -1,5 +1,11 @@
 import "../styles/globals.css";
 import { createTheme, ThemeProvider } from "@mui/material";
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import { useState, useEffect } from "react";
+import { UserProvider } from "@auth0/nextjs-auth0";
+
+config.autoAddCss = false;
 
 const theme = createTheme({
   palette: {
@@ -27,11 +33,26 @@ const theme = createTheme({
 });
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-    </ThemeProvider>
-  );
+  const [showChild, setShowChild] = useState(false);
+  useEffect(() => {
+    setShowChild(true);
+  }, []);
+
+  if (!showChild) {
+    return null;
+  }
+
+  if (typeof window === "undefined") {
+    return <></>;
+  } else {
+    return (
+      <UserProvider>
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </UserProvider>
+    );
+  }
 }
 
 export default MyApp;

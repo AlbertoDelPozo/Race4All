@@ -1,17 +1,17 @@
-import Typography from "@mui/material/Typography";
-import { Button } from "@mui/material";
-import SportsScoreIcon from '@mui/icons-material/SportsScore';
+import { Button, Stack, Typography, Box } from "@mui/material";
 import Image from "next/image";
-import Acc from "../public/image/acc-logo.png";
-import Box from '@mui/material/Box';
 import Link from "next/link";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFlagCheckered } from "@fortawesome/free-solid-svg-icons";
+import Acc from "../public/image/acc-logo.png";
+import Zoom from 'react-reveal/Zoom';
 
 
 function Home() {
-    return (
-      <Box bgcolor="#15121E" style={{ height: "100vh" }}>
-        <Typography
+  return (
+    <Box bgcolor="#15121E" style={{ height: "100vh" }}>
+      <Zoom>
+        <Stack
           display="flex"
           flexDirection="column"
           alignItems="center"
@@ -20,18 +20,18 @@ function Home() {
           style={{ color: "#F6F6F6" }}
         >
           <Typography
-            variant="h2"
+            variant="h1"
             display="flex"
             alignItems="center"
             justifyContent="center"
             color="terciary"
-            mb={4}
+            mb={2}
             mt={10}
           >
             WELCOME TO RACE4ALL
           </Typography>
           <Typography
-            variant="h4"
+            variant="h3"
             display="flex"
             alignItems="center"
             justifyContent="center"
@@ -45,18 +45,15 @@ function Home() {
             justifyContent="center"
             mb={2}
           >
-            <Link href="/login">
-              <Button
-                variant="contained"
-                color="secondary"
-                startIcon={<SportsScoreIcon />}
-              >
-                Únete
+            <Link href="/api/auth/login" passHref>
+              <Button variant="contained" color="secondary" size="large">
+                <FontAwesomeIcon icon={faFlagCheckered} />
+                &nbsp;&nbsp;Únete
               </Button>
             </Link>
           </Typography>
           <Typography
-            variant="h5"
+            variant="h4"
             display="flex"
             alignItems="center"
             justifyContent="center"
@@ -68,6 +65,7 @@ function Home() {
             display="flex"
             alignItems="center"
             justifyContent="center"
+            mb={2}
           >
             <Image
               src={Acc}
@@ -77,7 +75,7 @@ function Home() {
             ></Image>
           </Typography>
           <Typography
-            variant="h5"
+            variant="h4"
             display="flex"
             alignItems="center"
             justifyContent="center"
@@ -86,7 +84,7 @@ function Home() {
             Próximamente en más juegos
           </Typography>
           <Typography
-            variant="h3"
+            variant="h2"
             display="flex"
             alignItems="center"
             justifyContent="center"
@@ -94,9 +92,10 @@ function Home() {
           >
             IT IS TIME TO RACE
           </Typography>
-        </Typography>
-      </Box>
-    );
+        </Stack>
+      </Zoom>
+    </Box>
+  );
 }
 
 export default Home;
