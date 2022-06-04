@@ -9,7 +9,7 @@ const Campeonato = () => {
   const [campeonato, setCampeonato] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/campeonatos/" + cid)
+    fetch("https://race4-all.vercel.app/campeonatos/" + cid)
       .then((res) => res.json())
       .then((data) => setCampeonato(data));
   }, []);
