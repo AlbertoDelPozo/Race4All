@@ -9,7 +9,8 @@ import Zoom from 'react-reveal/Zoom';
 
 function Home() {
   return (
-    <Box bgcolor="#15121E" style={{ height: "100vh" }}>
+    <Box bgcolor="#15121E" style={{ height: "100vh", backgroundColor: "rgba(21,18,30, 0.9)" }}>
+      <div className="bg-image"></div>
       <Zoom>
         <Stack
           display="flex"
@@ -17,7 +18,15 @@ function Home() {
           alignItems="center"
           justifyContent="center"
           height={900}
-          style={{ color: "#F6F6F6" }}
+          style={{
+            color: "#15121E",
+            position: "absolute",
+            top: "0%",
+            left: "50%",
+            transform: "translate(-50%, -100%)",
+            zIndex: "2",
+            
+          }}
         >
           <Typography
             variant="h1"

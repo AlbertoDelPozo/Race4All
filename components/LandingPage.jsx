@@ -2,6 +2,8 @@ import NavBar from "./NavBar";
 import Home from "./home";
 import Campeonato from "./Campeonato";
 import Nosotros from "./Nosotros";
+import Footer from "./Footer";
+
 
 function LandingPage() {
   return (
@@ -10,6 +12,7 @@ function LandingPage() {
       <Home></Home>
       <Campeonato></Campeonato>
       <Nosotros></Nosotros>
+      <Footer></Footer>
     </>
   );
 }

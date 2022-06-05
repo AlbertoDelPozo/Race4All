@@ -10,8 +10,10 @@ import { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
 import CountDown from "./CountDown";
 
+import RubberBand from 'react-reveal/RubberBand';
+
 export async function getStaticProps() {
-  const res = await fetch("https://race4-all.vercel.app/api/campeonatos");
+  const res = await fetch("http://localhost:3000/api/campeonatos");
   const championships = await res.json();
 
   return {
@@ -39,9 +41,10 @@ function Campeonato({ championships }) {
       direction="row"
       justifyContent="center"
       alignItems="space-around"
-      spacing={8}
+      spacing={25}
       bgcolor="#15121E"
-      style={{ height: "79vh" }}
+      style={{ height: "90vh" }}
+      pt={20}
     >
       {campeonatosDestacados.map((campeonato) => (
         <Link
@@ -49,48 +52,50 @@ function Campeonato({ championships }) {
           key={campeonato.id}
           passHref
         >
-          <Card
-            style={{ maxWidth: "40vh", border: "none", boxShadow: "none" }}
-            variant="outlined"
-            key={campeonato.id}
-          >
-            <CardContent>
-              <Typography variant="h3" align="center" mb={3}>
-                {campeonato.title}
-              </Typography>
-              <Typography
-                variant="body1"
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                mb={3}
-              >
-                <Image
-                  src={imgCampeonatos[campeonato.id - 1]}
-                  alt="Coche de carreras rojo"
-                  width={300}
-                  height={168}
-                />
-              </Typography>
-              <Typography variant="h6" align="center">
-                {campeonato.description}
-              </Typography>
-              <Stack
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                mt={5}
-              >
-                <Button variant="contained" color="secondary">
-                  Participa
-                </Button>
-              </Stack>
+          <RubberBand>
+            <Card
+              style={{ maxWidth: "40vh", boxShadow: "none" , border: "1px solid #FF276F", borderRadius: "10px"}}
+              variant="outlined"
+              key={campeonato.id}
+            >
+              <CardContent>
+                <Typography variant="h3" align="center" mb={3}>
+                  {campeonato.title}
+                </Typography>
+                <Typography
+                  variant="body1"
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                  mb={3}
+                >
+                  <Image
+                    src={imgCampeonatos[campeonato.id - 1]}
+                    alt="Coche de carreras rojo"
+                    width={300}
+                    height={168}
+                  />
+                </Typography>
+                <Typography variant="h6" align="center">
+                  {campeonato.description}
+                </Typography>
+                <Stack
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  mt={5}
+                >
+                  <Button variant="contained" color="secondary">
+                    Participa
+                  </Button>
+                </Stack>
 
-              <Typography variant="h5" align="center" mt={5}>
-                <CountDown></CountDown>
-              </Typography>
-            </CardContent>
-          </Card>
+                <Typography variant="h5" align="center" mt={5}>
+                  <CountDown></CountDown>
+                </Typography>
+              </CardContent>
+            </Card>
+          </RubberBand>
           {/* <CampeonatoComponent id={campeonato.id} title={campeonato.title} description={campeonato.description} imgUrl={imgCampeonatos}></CampeonatoComponent> */}
         </Link>
       ))}

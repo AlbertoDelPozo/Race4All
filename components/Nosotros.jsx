@@ -12,16 +12,15 @@ function InfoNosotros() {
         spacing={8}
         bgcolor="#15121E"
         padding={10}
-        style={{ height: "80vh" }}
+        style={{ height: "70vh" }}
       >
         <Typography variant="h2" component="h1">
           ¿Quiénes somos?
         </Typography>
         <Typography variant="h6" component="p" align="center" width={1000}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-          blanditiis tenetur unde suscipit, quam beatae rerum inventore
-          consectetur, neque doloribus, cupiditate numquam dignissimos laborum
-          fugiat deleniti? Eum quasi quidem quibusdam.
+          Esto nace de un proyecto de fin de grado del Grado Superior de Desarrollo de aplicaciones web con la intención de dar un buen servicio competitivo de carreras online 
+          en Assetto Corsa Competizione. Con carreras reales en el juego, clima real y la mayor deportitividad posible. Nuestro objetivo es que disfrutéis de los campeonatos 
+          que ofrecemos y tengáis la mejor experiencia competitiva posible. &nbsp;&nbsp;:)
         </Typography>
         <Link href="/regulations" passHref>
           <Button color="secondary" variant="contained">
