@@ -4,9 +4,9 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { useState, useEffect } from "react";
 
-import initAuth from '../initAuth' // the module you created above
 
-initAuth()
+
+
 
 config.autoAddCss = false;
 
