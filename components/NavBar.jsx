@@ -22,10 +22,11 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { useUser } from "@auth0/nextjs-auth0";
+
+
+
 
 function Header() {
-  const { user } = useUser();
   return (
     <Box style={{ position: "sticky", top: 0, zIndex: 1 }}>
       <AppBar elevation={0}>
@@ -76,21 +77,10 @@ function Header() {
               </Link>
               <FontAwesomeIcon icon={faInstagram} />
               <FontAwesomeIcon icon={faDiscord} />
-              {user && (
-                <>
-                  <Link href="/profile" passHref>
-                    <Avatar alt="Cindy Baker" src={user.picture} />
-                  </Link>
-                </>
-              )}
-              {user && (
-                <Link href="/api/auth/logout" passHref>
-                  {/* <LogoutIcon></LogoutIcon> */}
-                  <LogoutIcon />
-                </Link>
-              )}
-              {!user && (
-                <Link href="/api/auth/login" passHref>
+              
+           
+              
+                <Link href="/login" passHref>
                   <Button
                     variant="contained"
                     color="secondary"
@@ -99,7 +89,7 @@ function Header() {
                     Perfil
                   </Button>
                 </Link>
-              )}
+              
             </Stack>
           </Toolbar>
         </Container>

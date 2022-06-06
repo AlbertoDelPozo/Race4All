@@ -3,7 +3,10 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { useState, useEffect } from "react";
-import { UserProvider } from "@auth0/nextjs-auth0";
+
+import initAuth from '../initAuth' // the module you created above
+
+initAuth()
 
 config.autoAddCss = false;
 
@@ -46,11 +49,11 @@ function MyApp({ Component, pageProps }) {
     return <></>;
   } else {
     return (
-      <UserProvider>
+      // <UserProvider>
         <ThemeProvider theme={theme}>
           <Component {...pageProps} />
         </ThemeProvider>
-      </UserProvider>
+      // </UserProvider>
     );
   }
 }
