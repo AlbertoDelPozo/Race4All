@@ -9,7 +9,7 @@ import Zoom from 'react-reveal/Zoom';
 
 function Home() {
   return (
-    <Box bgcolor="#15121E" style={{ height: "100vh", backgroundColor: "rgba(21,18,30, 0.9)" }}>
+    <Box bgcolor="#15121E" style={{ height: "100vh", backgroundColor: "rgba(21,18,30, 0.9)" , backgroundImage: "../public/image/img5.png"}}>
       <div className="bg-image"></div>
       <Zoom>
         <Stack
@@ -34,6 +34,7 @@ function Home() {
             alignItems="center"
             justifyContent="center"
             color="terciary"
+            align="center"
             mb={2}
             mt={10}
           >
@@ -45,6 +46,7 @@ function Home() {
             alignItems="center"
             justifyContent="center"
             mb={2}
+            align="center"
           >
             Compite contra los mejores
           </Typography>
@@ -54,7 +56,7 @@ function Home() {
             justifyContent="center"
             mb={2}
           >
-            <Link href="/api/auth/login" passHref>
+            <Link href="/api/auth/signin" passHref>
               <Button variant="contained" color="secondary" size="large">
                 <FontAwesomeIcon icon={faFlagCheckered} />
                 &nbsp;&nbsp;Únete
@@ -67,6 +69,7 @@ function Home() {
             alignItems="center"
             justifyContent="center"
             mb={2}
+            align="center"
           >
             Competiciones en
           </Typography>
@@ -89,6 +92,7 @@ function Home() {
             alignItems="center"
             justifyContent="center"
             mb={2}
+            align="center"
           >
             Próximamente en más juegos
           </Typography>
@@ -98,6 +102,7 @@ function Home() {
             alignItems="center"
             justifyContent="center"
             mb={4}
+            align="center"
           >
             IT IS TIME TO RACE
           </Typography>

@@ -33,3 +33,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.profile {
+  border-radius: 100px;
+}

@@ -1,19 +1,27 @@
-import { useUser } from "@auth0/nextjs-auth0";
+import { Stack, Typography } from '@mui/material';
+import { useSession } from 'next-auth/react';
 
 function Profile() {
-  const { user, error, isLoading } = useUser();
-
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>{error.message}</div>;
+  const { data: session, status } = useSession();
 
   return (
-    user && (
-      <div>
-        <img src={user.picture} alt={user.name} />
-        <h2>{user.name}</h2>
-        <p>{user.email}</p>
-      </div>
-    )
+    <Stack
+    direction="row"
+    alignItems="center"
+    justifyItems="center"
+    color="primary"
+    >
+
+      {status === "authenticated" ? (
+        <Typography align='center' color="terciary">
+          {session.user.name}
+        </Typography>
+      ) : (
+        <Typography>
+          There was an error
+        </Typography>
+      )}
+    </Stack>
   );
 }
 export default Profile;

@@ -3,6 +3,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { useState, useEffect } from "react";
+import { SessionProvider } from "next-auth/react"
 
 
 
@@ -35,27 +36,15 @@ const theme = createTheme({
   },
 });
 
-function MyApp({ Component, pageProps }) {
-  const [showChild, setShowChild] = useState(false);
-  useEffect(() => {
-    setShowChild(true);
-  }, []);
-
-  if (!showChild) {
-    return null;
-  }
-
-  if (typeof window === "undefined") {
-    return <></>;
-  } else {
-    return (
-      // <UserProvider>
-        <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
-        </ThemeProvider>
-      // </UserProvider>
-    );
-  }
+export default function MyApp({
+  Component,
+  pageProps: { session, ...pageProps },
+}) {
+  return (
+    <SessionProvider session={session}>
+      <ThemeProvider theme={theme}>
+      <Component {...pageProps} />
+      </ThemeProvider>
+    </SessionProvider>
+  )
 }
-
-export default MyApp;

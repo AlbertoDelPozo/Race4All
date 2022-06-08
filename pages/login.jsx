@@ -68,18 +68,23 @@ export default function SignIn() {
         <Box
           sx={{
             marginTop: 20,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <Box
+            component="form"
+            onSubmit={handleSubmit}
+            noValidate
+            sx={{ mt: 1 }}
+          >
             <TextField
               margin="normal"
               required
@@ -100,7 +105,7 @@ export default function SignIn() {
               type="password"
               id="password"
               autoComplete="current-password"
-              color='secondary'
+              color="secondary"
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="secondary" />}
@@ -111,19 +116,34 @@ export default function SignIn() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              color='secondary'
+              color="secondary"
             >
               Sign In
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link
+                  href="#"
+                  variant="body2"
+                  sx={{ color: "#F6F6F6", textDecoration: "none" }}
+                >
                   Forgot password?
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="/signup" variant="body1" sx={{color: '#F6F6F6', textDecoration: 'none'}}>
+                <Link
+                  href="/signup"
+                  variant="body1"
+                  sx={{ color: "#F6F6F6", textDecoration: "none" }}
+                >
                   {"Don't have an account? Sign Up"}
+                </Link>
+              </Grid>
+            </Grid>
+            <Grid container mt={5}>
+              <Grid item>
+                <Link href='/api/auth/signin' variant='h6' sx={{ color: "#F6F6F6", textDecoration: "none" }}>
+                  {"Github"}
                 </Link>
               </Grid>
             </Grid>
