@@ -21,7 +21,4 @@ export default NextAuth({
       })
   ],
   secret: "707049fcdbcd52ac2114e15a2c97d566",
-  pages: {
-    signIn: '/auth/signin',
-  }
 });
