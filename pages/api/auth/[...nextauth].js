@@ -20,7 +20,7 @@ export default NextAuth({
         issuer: process.env.AUTH0_ISSUER
       })
   ],
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: "707049fcdbcd52ac2114e15a2c97d566",
   pages: {
     signIn: '/auth/signin',
   }
