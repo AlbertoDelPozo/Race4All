@@ -23,7 +23,7 @@ export default function CampeonatosApi(
     {
       id: 2,
       title: "Campeonato GT3",
-      description:"Campeonato GT3 con carreras al sprint de duración máxima de 1 hora y parada en boxes obligatoria, con clasificación a 1 vuelta. ",
+      description:"Campeonato GT3 con carreras al sprint de duración máxima de 1 hora y parada en boxes obligatoria, con clasificación a 1 vuelta. Compite como si fuera en la realidad y disfruta como nunca.",
       destacado: "",
     },
     {
@@ -35,7 +35,7 @@ export default function CampeonatosApi(
     {
       id: 4,
       title: "GT4 Championship",
-      description: "Campeonato con los coches menos potentes pero los más igualados.",
+      description: "Campeonato con los coches menos potentes pero los más igualados. Disfruta de los mejores paralelos contra tus rivales y respeta a los demás.",
     },
     {
       id: 5,
@@ -45,7 +45,7 @@ export default function CampeonatosApi(
     {
       id: 6,
       title: "Campeonato Internacional",
-      description: "",
+      description: "Campeonato que incluye todos los circuitos del juego, compite en Europa, en Estados Unidos, pasando por Japón, Sudáfrica y finaliza en Australia. Circuitos de todas las formar, diseños y colores.",
     },
     // {
     //   id: 7,

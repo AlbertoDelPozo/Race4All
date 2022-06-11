@@ -5,8 +5,6 @@ import { Box } from "@mui/system";
 import NavBar from "../../components/NavBar"
 import Link from "next/link";
 
-
-
 const theme = createTheme({
   palette: {
     type: "dark",
@@ -77,11 +75,13 @@ const Campeonato = () => {
               allowFullScreen
             ></iframe>
           </Typography>
-          <Link href="https://assettohosting.com/acc/interface.html" passHref>
-            <Button variant="contained" color="secondary">
-              Participa
-            </Button>
-          </Link>
+          <Typography align="center" mt={4}>
+            <Link href="https://assettohosting.com/acc/interface.html" passHref>
+              <Button variant="contained" color="secondary">
+                Participa
+              </Button>
+            </Link>
+          </Typography>
         </Container>
       </Box>
     </ThemeProvider>

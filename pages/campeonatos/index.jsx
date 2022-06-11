@@ -6,6 +6,12 @@ import { Card } from "@mui/material";
 import Footer from "../../components/Footer"
 import Image from "next/image"
 import CountDown from "../../components/CountDown";
+import Img1 from "../../public/image/img1.jpg";
+import Img6 from "../../public/image/img6.png";
+import Img7 from "../../public/image/img7.png";
+import Img8 from "../../public/image/img8.jpg";
+import Img9 from "../../public/image/img9.jpg";
+import Img10 from "../../public/image/img10.jpg";
 
 function Campeonatos() {
   const [campeonatos, setCampeonatos] = useState([]);
@@ -16,6 +22,8 @@ function Campeonatos() {
       .then((data) => setCampeonatos(data));
   }, []);
 
+  const imgCampeonatos = [Img1, Img6, Img7, Img8, Img9, Img10];
+
   return (
     <>
       <Navbar></Navbar>
@@ -25,7 +33,7 @@ function Campeonatos() {
           color="secundary"
           align="center"
           mb={5}
-          pt={20}
+          pt={15}
           display="flex"
           alignItems="center"
           justifyContent="center"
@@ -52,7 +60,8 @@ function Campeonatos() {
                     boxShadow: "none",
                     border: "1px solid #FF276F",
                     borderRadius: "10px",
-                    minHeight: "60vh"
+                    minHeight: "60vh",
+                    maxHeight: "65vh"
                   }}
                   variant="outlined"
                   key={campeonato.id}
@@ -68,12 +77,12 @@ function Campeonatos() {
                       alignItems="center"
                       mb={3}
                     >
-                      {/* <Image
+                      <Image
                     src={imgCampeonatos[campeonato.id - 1]}
                     alt="Coche de carreras rojo"
-                    width={300}
-                    height={168}
-                  /> */}
+                    width={500}
+                    height={281}
+                  />
                     </Typography>
                     <Typography variant="h6" align="center">
                       {campeonato.description}
