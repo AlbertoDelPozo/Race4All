@@ -1,0 +1,252 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "library_ID": "01",
+          "circuit_name": "Circuit Barcelona-Cataluña",
+          "country":"Spain",
+          "video": "http://stadsoasespinozahof.nl/"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [41.5684837, 2.2551072]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "02",
+            "circuit_name": "Brands Hatch",
+            "country":"Reino Unido",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [51.3583068, 0.2536871]
+          }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "03",
+            "circuit_name": "Hungaro Ring",
+            "country":"Hungría",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [47.5817111, 19.2484166]
+          }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "04",
+            "circuit_name": "Circuito de Misano Marco Simoncelli",
+            "country":"Italia",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [43.9635069, 12.6811023]
+          }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "05",
+            "circuit_name": "Autodromo Nacional de Monza",
+            "country":"Italia",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [45.6217989, 9.28031]
+          }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "06",
+            "circuit_name": "Nürburgring",
+            "country":"Alemania",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [50.3338714, 6.9446767]
+          }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "07",
+            "circuit_name": "Paul Ricard",
+            "country":"Francia",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [43.2474276, 5.7790587]
+          }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "08",
+            "circuit_name": "Silverstone",
+            "country":"Reino Unido",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [52.0735907, -1.0245017]
+          }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "09",
+            "circuit_name": "Spa-Francorchamps",
+            "country":"Bélgica",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [50.4360107, 5.9626616]
+          }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "10",
+            "circuit_name": "Zandvoort",
+            "country":"Países Bajos",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [52.3810726, 4.5362145]
+          }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "11",
+            "circuit_name": "Zolder",
+            "country":"Bélgica",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [50.982373, 5.2357753]
+          }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "12",
+            "circuit_name": "Donington Park",
+            "country":"Reino Unido",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [52.8303523, -1.3799561]
+          }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "13",
+            "circuit_name": "Oulton Park Circuit",
+            "country":"Reino Unido",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [53.1777803, -2.6202677]
+          }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "14",
+            "circuit_name": "Snetterton Circuit",
+            "country":"Reino Unido",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [52.4632058, 0.940265]
+          }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "15",
+            "circuit_name": "Autodromo Enzo e Dino Ferrari",
+            "country":"Italia",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [44.3440738, 11.7121569]
+          }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "16",
+            "circuit_name": "Kyalami",
+            "country":"Sudáfrica",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-25.9997775,28.0638147]
+          }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "17",
+            "circuit_name": "Suzuka",
+            "country":"Japón",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [34.8472582,136.5354007]
+          }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "18",
+            "circuit_name": "Laguna Seca",
+            "country":"Estados Unidos",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [36.583686,-121.7577323]
+          }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "library_ID": "19",
+            "circuit_name": "Mount Panorama",
+            "country":"Australia",
+            "video": "http://stadsoasespinozahof.nl/"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [-33.4439717,149.5543286]
+          }
+      }
+    ]
+  }

@@ -48,13 +48,19 @@ function Campeonato({ championships }) {
     >
       {campeonatosDestacados.map((campeonato) => (
         <Link
-          href={`/campeonatos/${encodeURIComponent(campeonato.id)}`}
+          href={`/campeonatos/${(campeonato.id)}`}
           key={campeonato.id}
           passHref
         >
           <RubberBand>
             <Card
-              style={{ maxWidth: "40vh", boxShadow: "none" , border: "1px solid #FF276F", borderRadius: "10px"}}
+              style={{
+                maxWidth: "50vh",
+                minHeight: "65vh",
+                boxShadow: "none",
+                border: "1px solid #FF276F",
+                borderRadius: "10px",
+              }}
               variant="outlined"
               key={campeonato.id}
             >
@@ -85,9 +91,11 @@ function Campeonato({ championships }) {
                   justifyContent="center"
                   mt={5}
                 >
-                  <Button variant="contained" color="secondary">
-                    Participa
-                  </Button>
+                  <Link href={`/campeonatos/${(campeonato.id)}`} passHref>
+                    <Button variant="contained" color="secondary">
+                      Participa
+                    </Button>
+                  </Link>
                 </Stack>
 
                 <Typography variant="h5" align="center" mt={5}>
