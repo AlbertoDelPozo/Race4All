@@ -44,8 +44,10 @@
     "react-dom": "^18.1.0",
     "react-google-maps": "^9.4.5",
     "react-leaflet": "^4.0.0",
+    "react-loader-spinner": "^5.1.5",
     "react-reveal": "^1.2.2",
-    "reactstrap": "9.0.2"
+    "reactstrap": "9.0.2",
+    "sass": "^1.52.3"
   },
   "devDependencies": {
     "@types/node": "17.0.23",

@@ -12,7 +12,8 @@ function InfoNosotros() {
         spacing={8}
         bgcolor="#15121E"
         padding={10}
-        style={{ height: "70vh" }}
+        height="80vh"
+        
       >
         <Typography variant="h2" component="h1">
           ¿Quiénes somos?

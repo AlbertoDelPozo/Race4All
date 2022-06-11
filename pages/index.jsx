@@ -1,5 +1,7 @@
 import LandingPage from "../components/LandingPage";
 import { useSession } from "next-auth/react";
+import { CircularProgress } from "@mui/material"
+import { Box } from "@mui/system";
 
 const Home = () => {
 
@@ -7,13 +9,15 @@ const Home = () => {
 
   console.log(data, status);
 
-  if (status === 'loading') {
-    return <p>Loading</p>
-  }
-
   return (
     <>
-      <LandingPage></LandingPage>
+      {status === "loading" ? (
+        <Box position="absolute" top="50%" left="50%">
+          <CircularProgress />
+        </Box>
+      ) : (
+        <LandingPage></LandingPage>
+      )}
     </>
   );
 };

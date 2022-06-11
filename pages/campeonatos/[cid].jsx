@@ -1,9 +1,10 @@
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import { Typography, Container, createTheme, ThemeProvider } from "@mui/material";
-import { Box } from "@mui/system";
+import { Typography, Container, createTheme, ThemeProvider, Link, CircularProgress } from "@mui/material";
+import { Box, Button } from "@mui/system";
 import NavBar from "../../components/NavBar"
 import Image from "next/image";
+
 
 const theme = createTheme({
   palette: {
@@ -45,11 +46,16 @@ const Campeonato = () => {
   const myCampeonato = campeonatos[cid - 1];
 
   if (myCampeonato === undefined || myCampeonato === null) {
-    return <Container>Loading</Container>;
+    return (
+      <Box position="absolute" top="50%" left="50%">
+        <CircularProgress />
+      </Box>
+    );
   }
 
 
   return (
+    
     <ThemeProvider theme={theme}>
       <NavBar></NavBar>
       <Box sx={{ bgcolor: "#15121E" }} height="100vh" pt={20}>
@@ -71,6 +77,11 @@ const Campeonato = () => {
               allowFullScreen
             ></iframe>
           </Typography>
+          <Link href="https://assettohosting.com/acc/interface.html" passHref>
+            <Button variant="contained" color="secondary">
+              Participa
+            </Button>
+          </Link>
         </Container>
       </Box>
     </ThemeProvider>

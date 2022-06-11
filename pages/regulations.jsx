@@ -5,15 +5,15 @@ function regulations() {
   return (
     <>
       <Navbar></Navbar>
-      <Box height="100vh" sx={{ backgroundColor: "#15121E" }}>
-        <Typography variant="h2" color="secundary" align="center" pt={20}>
+      <Box height="110vh" sx={{ backgroundColor: "#15121E" }}>
+        <Typography variant="h2" color="#FF276F" align="center" pt={20}>
           Normativa
         </Typography>
         <Container>
           <Typography variant="h4" color="secundary" mb={4} align="center">
             Distintos tipos de normas para participar en los campeonatos
           </Typography>
-          <Typography variant="h5" color="secundary" mb={2} align="center">
+          <Typography variant="h5" color="#FF276F" mb={2} align="center">
             Objetivo
           </Typography>
           <Typography variant="h6" color="secundary" mb={4} align="center">
@@ -23,7 +23,7 @@ function regulations() {
             lo más limpios posibles para poder ver luchas en pista sin
             incidentes.
           </Typography>
-          <Typography variant="h5" color="secundary" mb={2} align="center">
+          <Typography variant="h5" color="#FF276F" mb={2} align="center">
             Respeto en pista
           </Typography>
           <Typography variant="h6" color="secundary" mb={4} align="center">
@@ -41,7 +41,7 @@ function regulations() {
             investigación del accidente sale en contra del denunciante, se
             aplicarían los mismo criterios mencionados anteriormente.
           </Typography>
-          <Typography variant="h5" color="secundary" mb={2} align="center">
+          <Typography variant="h5" color="#FF276F" mb={2} align="center">
             Carné de piloto
           </Typography>
           <Typography variant="h6" color="secundary" mb={4} align="center">

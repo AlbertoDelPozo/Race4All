@@ -43,7 +43,7 @@ function Campeonato({ championships }) {
       alignItems="space-around"
       spacing={25}
       bgcolor="#15121E"
-      style={{ height: "90vh" }}
+      height="100vh"
       pt={20}
     >
       {campeonatosDestacados.map((campeonato) => (
