@@ -1,9 +1,10 @@
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import { Typography, Container, createTheme, ThemeProvider, Link, CircularProgress } from "@mui/material";
-import { Box, Button } from "@mui/system";
+import { Typography, Container, createTheme, ThemeProvider, CircularProgress, Button} from "@mui/material";
+import { Box } from "@mui/system";
 import NavBar from "../../components/NavBar"
-import Image from "next/image";
+import Link from "next/link";
+
 
 
 const theme = createTheme({
@@ -55,7 +56,6 @@ const Campeonato = () => {
 
 
   return (
-    
     <ThemeProvider theme={theme}>
       <NavBar></NavBar>
       <Box sx={{ bgcolor: "#15121E" }} height="100vh" pt={20}>
