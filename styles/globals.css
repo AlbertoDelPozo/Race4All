@@ -19,7 +19,7 @@ a {
 
 .bg-image {
   /* The image used */
-  background-image: url("https://race4-all.vercel.app/public/image/img5.png");
+  background-image: url("/img5.png");
 
   /* Add the blur effect */
   filter: blur(8px);
