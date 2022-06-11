@@ -17,9 +17,7 @@ function LandingPage() {
 
   return (
     <>
-      <Head>
-        <link href="/static/globals.css" rel="stylesheet" />
-      </Head>
+
       <NavBar style={{ position: "sticky" }}></NavBar>
       <Home></Home>
       <Campeonato></Campeonato>
