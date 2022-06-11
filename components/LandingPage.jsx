@@ -4,6 +4,7 @@ import Campeonato from "./Campeonato";
 import Nosotros from "./Nosotros";
 import Footer from "./Footer";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 
 const Map = dynamic(() => import("../components/Map"), {
   loading: () => "Loading...",
@@ -16,6 +17,9 @@ function LandingPage() {
 
   return (
     <>
+      <Head>
+        <link href="/static/globals.css" rel="stylesheet" />
+      </Head>
       <NavBar style={{ position: "sticky" }}></NavBar>
       <Home></Home>
       <Campeonato></Campeonato>
