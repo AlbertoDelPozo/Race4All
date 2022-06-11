@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "../static/globals.css";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
