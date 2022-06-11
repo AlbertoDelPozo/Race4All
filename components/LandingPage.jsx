@@ -18,7 +18,7 @@ function LandingPage() {
   return (
     <>
       <Head>
-        <link href="/static/globals.css" rel="stylesheet" />
+        <link href="https://race4-all.vercel.app/static/globals.css" rel="stylesheet" />
       </Head>
       <NavBar style={{ position: "sticky" }}></NavBar>
       <Home></Home>
