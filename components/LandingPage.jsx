@@ -19,12 +19,25 @@ function LandingPage() {
 
   return (
     <Grid container direction="column">
-      <NavBar style={{ position: "sticky" }}></NavBar>
-      <Home></Home>
-      <Campeonato></Campeonato>
-      <Map></Map>
-      <AudioMotores></AudioMotores>
-      <Nosotros></Nosotros>
+      <Grid item>
+        <NavBar style={{ position: "sticky" }}></NavBar>
+      </Grid>
+      <Grid item>
+        <Home></Home>
+      </Grid>
+      <Grid item>
+        <Campeonato></Campeonato>
+      </Grid>
+      <Grid item>
+        <Map></Map>
+      </Grid>
+      <Grid item>
+        <AudioMotores></AudioMotores>
+      </Grid>
+      <Grid item>
+        <Nosotros></Nosotros>
+      </Grid>
+      <Grid item></Grid>
       <Footer></Footer>
     </Grid>
   );
