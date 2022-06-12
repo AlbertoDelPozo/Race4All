@@ -17,7 +17,7 @@ function Campeonatos() {
   const [campeonatos, setCampeonatos] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/campeonatos")
+    fetch("https://race4-all.vercel.app/api/campeonatos")
       .then((res) => res.json())
       .then((data) => setCampeonatos(data));
   }, []);
