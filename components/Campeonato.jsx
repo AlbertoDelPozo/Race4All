@@ -1,6 +1,6 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import { Typography, Stack } from "@mui/material";
+import { Typography, Stack, Grid } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import GT3Normal from "../public/image/img4.png";
@@ -25,7 +25,7 @@ function Campeonato({ championships }) {
   const [campeonatos, setCampeonatos] = useState([]);
 
   useEffect(() => {
-    fetch("https://race4-all.vercel.app/api/campeonatos")
+    fetch("http://localhost:3000/api/campeonatos")
       .then((res) => res.json())
       .then((data) => setCampeonatos(data));
   }, []);
@@ -41,11 +41,16 @@ function Campeonato({ championships }) {
       direction="row"
       justifyContent="center"
       alignItems="space-around"
-      spacing={25}
       bgcolor="#15121E"
-      height="100vh"
-      pt={20}
+      height="auto"
+      p={4}
+      
     >
+      <Grid 
+      container
+      justifyContent="center"
+      alignItems="center"
+      >
       {campeonatosDestacados.map((campeonato) => (
         <Link
           href={`/campeonatos/${(campeonato.id)}`}
@@ -56,10 +61,12 @@ function Campeonato({ championships }) {
             <Card
               style={{
                 maxWidth: "50vh",
-                minHeight: "65vh",
+                
                 boxShadow: "none",
                 border: "1px solid #FF276F",
                 borderRadius: "10px",
+                marginInline: "10vh",
+                marginBlock: "5vh"
               }}
               variant="outlined"
               key={campeonato.id}
@@ -107,6 +114,7 @@ function Campeonato({ championships }) {
           {/* <CampeonatoComponent id={campeonato.id} title={campeonato.title} description={campeonato.description} imgUrl={imgCampeonatos}></CampeonatoComponent> */}
         </Link>
       ))}
+      </Grid>
     </Stack>
   );
 }

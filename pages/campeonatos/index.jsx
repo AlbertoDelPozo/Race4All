@@ -17,7 +17,7 @@ function Campeonatos() {
   const [campeonatos, setCampeonatos] = useState([]);
 
   useEffect(() => {
-    fetch("https://race4-all.vercel.app/api/campeonatos")
+    fetch("http://localhost:3000/api/campeonatos")
       .then((res) => res.json())
       .then((data) => setCampeonatos(data));
   }, []);
@@ -42,7 +42,7 @@ function Campeonatos() {
         </Typography>
         <Grid
           container
-          height="230vh"
+          height="auto"
           width="100%"
           spacing={{ xs: 2, md: 10 }}
           columns={{ xs: 1, sm: 2, md: 8}}
@@ -61,7 +61,7 @@ function Campeonatos() {
                     border: "1px solid #FF276F",
                     borderRadius: "10px",
                     minHeight: "60vh",
-                    maxHeight: "65vh"
+                    maxHeight: "auto"
                   }}
                   variant="outlined"
                   key={campeonato.id}

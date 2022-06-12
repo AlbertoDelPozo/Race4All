@@ -5,14 +5,14 @@ import * as data from './circuitos.json';
 import 'leaflet-defaulticon-compatibility';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 
 
 
 function Map() {
 
   return (
-    <>
+    <Grid container direction="column">
       <Typography
         variant="h2"
         align="center"
@@ -59,7 +59,7 @@ function Map() {
           </Marker>
         ))}
       </MapContainer>
-    </>
+    </Grid>
   );
 }
 

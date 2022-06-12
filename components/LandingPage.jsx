@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import AudioMotores from "./audioMotores";
+import { Grid } from "@mui/material";
 
 const Map = dynamic(() => import("../components/Map"), {
   loading: () => "Loading...",
@@ -17,7 +18,7 @@ function LandingPage() {
 
 
   return (
-    <>
+    <Grid container direction="column">
       <NavBar style={{ position: "sticky" }}></NavBar>
       <Home></Home>
       <Campeonato></Campeonato>
@@ -25,7 +26,7 @@ function LandingPage() {
       <AudioMotores></AudioMotores>
       <Nosotros></Nosotros>
       <Footer></Footer>
-    </>
+    </Grid>
   );
 }
 

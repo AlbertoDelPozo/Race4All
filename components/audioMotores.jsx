@@ -1,11 +1,11 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 
 
 function AudioMotores() {
 
     return (
-      <>
+      <Grid container direction="column">
         <Box height="90vh" width="100%" bgcolor="#15121E">
           <Typography variant="h3" color="terciary" align="center" pt={6}>
             Conoce los diferentes motores
@@ -44,7 +44,7 @@ function AudioMotores() {
             </audio>
           </Typography>
         </Box>
-      </>
+      </Grid>
     );
 }
 

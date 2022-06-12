@@ -23,6 +23,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import { useSession } from 'next-auth/react';
+import { Grid } from "@mui/material";
 
 
 
@@ -33,7 +34,7 @@ const { data: session, status } = useSession();
 return (
   <Box style={{ position: "sticky", top: 0, zIndex: 1 }}>
     <AppBar elevation={0}>
-      <Container maxWidth="xxl">
+      <Grid maxWidth="100%" minWidth="auto" >
         <Toolbar>
           <Stack
             direction="row"
@@ -42,6 +43,7 @@ return (
             mt={1}
             mb={1}
             ml={10}
+            mr={4}
             sx={{ flexGrow: 1 }}
             display="flex"
             alignItems="center"
@@ -68,12 +70,12 @@ return (
           <Stack
             direction="row"
             spacing={3}
-            justifyContent="space-between"
+            justifyContent="flex"
             mt={2}
             mb={2}
             mr={5}
             display="flex"
-            alignItems="center"
+            alignItems="flex-end"
           >
             <Link href="https://twitter.com/race4alloficial" passHref>
               <FontAwesomeIcon icon={faTwitter} />
@@ -136,7 +138,7 @@ return (
               </Stack>
             )}
         </Toolbar>
-      </Container>
+      </Grid>
     </AppBar>
   </Box>
 );};
