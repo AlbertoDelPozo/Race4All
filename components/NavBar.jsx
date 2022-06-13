@@ -78,11 +78,6 @@ return (
               <SportsScoreIcon />
               </Link>
             </Typography>
-            <Typography variant="h6" component="ol" color="terciary" className="mostrar">
-              <Link underline="hover" href="/regulations" passHref>
-              <CoPresentIcon />
-              </Link>
-            </Typography>
           </Stack>
           <Stack
             direction="row"
@@ -145,7 +140,7 @@ return (
               display="flex"
               alignItems="center"
             >
-              <Typography ml={5} >
+              <Typography ml={8} >
               <Link href="/api/auth/signin" passHref>
                 <Button
                   variant="contained"
