@@ -12,6 +12,7 @@ import Img7 from "../../public/image/img7.png";
 import Img8 from "../../public/image/img8.jpg";
 import Img9 from "../../public/image/img9.jpg";
 import Img10 from "../../public/image/img10.jpg";
+import { Container } from "react-bootstrap";
 
 function Campeonatos() {
   const [campeonatos, setCampeonatos] = useState([]);
@@ -27,7 +28,7 @@ function Campeonatos() {
   return (
     <>
       <Navbar></Navbar>
-      <Box fixed sx={{ backgroundColor: "#15121E" }}>
+      <Container fixed style={{ backgroundColor: "#15121E", width: "100%"}}>
         <Typography
           variant="h2"
           color="secundary"
@@ -44,9 +45,10 @@ function Campeonatos() {
           container
           height="auto"
           width="100%"
-          spacing={{ xs: 2, md: 10 }}
+          spacing={{ xs: 0, md: 10 }}
           columns={{ xs: 1, sm: 2, md: 8}}
           p={8}
+          alignItems="space-between"
         >
           {campeonatos.map((campeonato) => (
             <Link
@@ -61,7 +63,8 @@ function Campeonatos() {
                     border: "1px solid #FF276F",
                     borderRadius: "10px",
                     minHeight: "60vh",
-                    maxHeight: "auto"
+                    maxHeight: "fit-content",
+                    minWidth: "50vh"
                   }}
                   variant="outlined"
                   key={campeonato.id}
@@ -109,8 +112,8 @@ function Campeonatos() {
             </Link>
           ))}
         </Grid>
-      </Box>
-      <Footer></Footer>
+      </Container>
+      {/* <Footer></Footer> */}
     </>
   );
 }

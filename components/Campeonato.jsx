@@ -42,14 +42,14 @@ function Campeonato({ championships }) {
       justifyContent="center"
       alignItems="space-around"
       bgcolor="#15121E"
-      height="auto"
       p={4}
-      
+      maxHeight="content"
     >
       <Grid 
       container
       justifyContent="center"
       alignItems="center"
+      height="auto"
       >
       {campeonatosDestacados.map((campeonato) => (
         <Link
@@ -61,7 +61,6 @@ function Campeonato({ championships }) {
             <Card
               style={{
                 maxWidth: "50vh",
-                
                 boxShadow: "none",
                 border: "1px solid #FF276F",
                 borderRadius: "10px",

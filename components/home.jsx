@@ -25,28 +25,29 @@ function Home() {
             left: "50%",
             transform: "translate(-50%, -100%)",
             zIndex: "2",
-            
           }}
         >
           <Typography
-            variant="h1"
+            variant="h2"
             display="flex"
             alignItems="center"
             justifyContent="center"
             color="terciary"
             align="center"
             mb={2}
-            mt={10}
+            mt={5}
+            className="titulo"
           >
             WELCOME TO RACE4ALL
           </Typography>
           <Typography
-            variant="h3"
+            variant="h4"
             display="flex"
             alignItems="center"
             justifyContent="center"
             mb={2}
             align="center"
+            className="compite"
           >
             Compite contra los mejores
           </Typography>
@@ -97,7 +98,7 @@ function Home() {
             Próximamente en más juegos
           </Typography>
           <Typography
-            variant="h2"
+            variant="h3"
             display="flex"
             alignItems="center"
             justifyContent="center"

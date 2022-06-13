@@ -12,14 +12,15 @@ import { Grid, Typography } from '@mui/material';
 function Map() {
 
   return (
-    <Grid container direction="column">
+    <Grid container direction="column"> 
       <Typography
         variant="h2"
         align="center"
         bgcolor="#15121E"
-        height="10vh"
+        height="auto"
         justifyContent="center"
         alignItems="center"
+        mt={0}
       >
         Localización de los circuitos
       </Typography>
@@ -27,7 +28,7 @@ function Map() {
         center={[20.4378693, -3.8199622]}
         zoom={3}
         scrollWheelZoom={false}
-        style={{ height: "70vh", width: "100%", zIndex: 0 }}
+        style={{ height: "100vh", width: "100%", zIndex: 0 }}
       >
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

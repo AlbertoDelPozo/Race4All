@@ -1,11 +1,12 @@
 import { Typography, Box, Container } from "@mui/material";
 import Navbar  from "../components/NavBar";
+import Footer from "../components/Footer"
 
 function regulations() {
   return (
     <>
       <Navbar></Navbar>
-      <Box height="110vh" sx={{ backgroundColor: "#15121E" }}>
+      <Box height="" sx={{ backgroundColor: "#15121E" }}>
         <Typography variant="h2" color="#FF276F" align="center" pt={20}>
           Normativa
         </Typography>
@@ -44,7 +45,7 @@ function regulations() {
           <Typography variant="h5" color="#FF276F" mb={2} align="center">
             Carné de piloto
           </Typography>
-          <Typography variant="h6" color="secundary" mb={4} align="center">
+          <Typography variant="h6" color="secundary"  align="center">
             Este será un carné al igual que el de conducir en el cual habrá un
             número inicial de puntos y que en caso de accidente puede conllevar
             retirada de puntos, en caso de buena conducta se podrá recuperar
@@ -58,6 +59,7 @@ function regulations() {
           </Typography>
         </Container>
       </Box>
+      <Footer></Footer>
     </>
   );
 }

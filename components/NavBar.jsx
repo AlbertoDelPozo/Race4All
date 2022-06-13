@@ -12,6 +12,9 @@ import Toolbar from "@mui/material/Toolbar";
 
 import PersonIcon from "@mui/icons-material/Person";
 import LogoutIcon from "@mui/icons-material/Logout";
+import LocalGasStationIcon from '@mui/icons-material/LocalGasStation';
+import SportsScoreIcon from '@mui/icons-material/SportsScore';
+import CoPresentIcon from '@mui/icons-material/CoPresent';
 
 import Logo from "../public/image/Logo_white.png";
 
@@ -20,6 +23,7 @@ import {
   faDiscord,
   faTwitter,
   faInstagram,
+  faGasPump,
 } from "@fortawesome/free-brands-svg-icons";
 
 import { useSession } from 'next-auth/react';
@@ -53,18 +57,31 @@ return (
               alt="Logo de la página"
               width={100}
               height={100}
+              
             />
-            <Typography variant="h6" component="ol" color="terciary">
+            <Typography variant="h6" component="ol" color="terciary" className="ocultar">
               <Link underline="hover" href="/" passHref>
                 {/* <FontAwesomeIcon icon={faGasPump} /> Introducir para la versión móvil  */}
                 {"Home"}
               </Link>
             </Typography>
-            <Typography variant="h6" component="ol" color="terciary">
+            <Typography variant="h6" component="ol" color="terciary" className="mostrar">
+              <Link underline="hover" href="/" passHref>
+              <LocalGasStationIcon />
+              </Link>
+            </Typography>
+            <Typography variant="h6" component="ol" color="terciary" className="ocultar">
               <Link href="/campeonatos">Campeonatos</Link>
             </Typography>
-            <Typography variant="h6" component="ol" color="terciary">
-              <Link href="/regulations">Nosotros</Link>
+            <Typography variant="h6" component="ol" color="terciary" className="mostrar">
+              <Link underline="hover" href="/campeonatos" passHref>
+              <SportsScoreIcon />
+              </Link>
+            </Typography>
+            <Typography variant="h6" component="ol" color="terciary" className="mostrar">
+              <Link underline="hover" href="/regulations" passHref>
+              <CoPresentIcon />
+              </Link>
             </Typography>
           </Stack>
           <Stack
@@ -76,12 +93,14 @@ return (
             mr={5}
             display="flex"
             alignItems="flex-end"
+            className="redes"
           >
-            <Link href="https://twitter.com/race4alloficial" passHref>
+            <Link href="https://twitter.com/race4alloficial" passHref >
               <FontAwesomeIcon icon={faTwitter} />
             </Link>
             <FontAwesomeIcon icon={faInstagram} />
-            <FontAwesomeIcon icon={faDiscord} />
+            <FontAwesomeIcon icon={faDiscord}  />
+
           </Stack>
             {status === "authenticated" ? (
               <Stack
@@ -100,7 +119,7 @@ return (
                     alt=""
                     height={30}
                     width={30}
-                    className="profile"
+                    className="ocultar"
                   ></Image>
                 </Link>
                 <Typography
@@ -126,6 +145,7 @@ return (
               display="flex"
               alignItems="center"
             >
+              <Typography ml={5} >
               <Link href="/api/auth/signin" passHref>
                 <Button
                   variant="contained"
@@ -135,6 +155,7 @@ return (
                   Perfil
                 </Button>
               </Link>
+              </Typography>
               </Stack>
             )}
         </Toolbar>
