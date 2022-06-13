@@ -65,7 +65,7 @@ function Home() {
             </Link>
           </Typography>
           <Typography
-            variant="h4"
+            variant="h5"
             display="flex"
             alignItems="center"
             justifyContent="center"
@@ -88,7 +88,7 @@ function Home() {
             ></Image>
           </Typography>
           <Typography
-            variant="h4"
+            variant="h5"
             display="flex"
             alignItems="center"
             justifyContent="center"
