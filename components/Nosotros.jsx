@@ -13,7 +13,7 @@ function InfoNosotros() {
           spacing={8}
           bgcolor="#15121E"
           padding={10}
-          height="auto"
+          height="100vh"
         >
           <Grid item xs={8}>
             <Typography

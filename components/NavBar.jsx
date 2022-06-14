@@ -38,7 +38,7 @@ const { data: session, status } = useSession();
 return (
   <Box style={{ position: "sticky", top: 0, zIndex: 1 }}>
     <AppBar elevation={0}>
-      <Grid maxWidth="100%" minWidth="auto" >
+      <Grid maxWidth="100%" minWidth="auto">
         <Toolbar>
           <Stack
             direction="row"
@@ -57,25 +57,44 @@ return (
               alt="Logo de la página"
               width={100}
               height={100}
-              
             />
-            <Typography variant="h6" component="ol" color="terciary" className="ocultar">
+            <Typography
+              variant="h6"
+              component="ol"
+              color="terciary"
+              className="ocultar"
+            >
               <Link underline="hover" href="/" passHref>
                 {/* <FontAwesomeIcon icon={faGasPump} /> Introducir para la versión móvil  */}
                 {"Home"}
               </Link>
             </Typography>
-            <Typography variant="h6" component="ol" color="terciary" className="mostrar">
+            <Typography
+              variant="h6"
+              component="ol"
+              color="terciary"
+              className="mostrar"
+            >
               <Link underline="hover" href="/" passHref>
-              <LocalGasStationIcon />
+                <LocalGasStationIcon />
               </Link>
             </Typography>
-            <Typography variant="h6" component="ol" color="terciary" className="ocultar">
+            <Typography
+              variant="h6"
+              component="ol"
+              color="terciary"
+              className="ocultar"
+            >
               <Link href="/campeonatos">Campeonatos</Link>
             </Typography>
-            <Typography variant="h6" component="ol" color="terciary" className="mostrar">
+            <Typography
+              variant="h6"
+              component="ol"
+              color="terciary"
+              className="mostrar"
+            >
               <Link underline="hover" href="/campeonatos" passHref>
-              <SportsScoreIcon />
+                <SportsScoreIcon />
               </Link>
             </Typography>
           </Stack>
@@ -90,15 +109,16 @@ return (
             alignItems="flex-end"
             className="redes"
           >
-            <Link href="https://twitter.com/race4alloficial" passHref >
+            <Link href="https://twitter.com/race4alloficial" passHref>
               <FontAwesomeIcon icon={faTwitter} />
             </Link>
             <FontAwesomeIcon icon={faInstagram} />
-            <FontAwesomeIcon icon={faDiscord}  />
-
+            <Link href="https://discord.gg/QRgWJMBf" passHref>
+              <FontAwesomeIcon icon={faDiscord} />
+            </Link>
           </Stack>
-            {status === "authenticated" ? (
-              <Stack
+          {status === "authenticated" ? (
+            <Stack
               direction="row"
               spacing={3}
               justifyContent="space-between"
@@ -108,51 +128,51 @@ return (
               display="flex"
               alignItems="center"
             >
-                <Link href="/profile" passHref>
-                  <Image
-                    src={session.user.image}
-                    alt=""
-                    height={30}
-                    width={30}
-                    className="ocultar"
-                  ></Image>
-                </Link>
-                <Typography
-                  display="flex"
-                  justifyContent="center"
-                  alignItems="center"
-                  mb={100}
-                  color="secondary"
-                >
-                  <Link href="/api/auth/signout" passHref>
-                    {<LogoutIcon />}
-                  </Link>
-                </Typography>
-              </Stack>
-            ) : (
-              <Stack
-              direction="row"
-              spacing={3}
-              justifyContent="space-between"
-              mt={2}
-              mb={2}
-              mr={10}
-              display="flex"
-              alignItems="center"
-            >
-              <Typography ml={5} >
-              <Link href="/api/auth/signin" passHref>
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  startIcon={<PersonIcon />}
-                >
-                  Perfil
-                </Button>
+              <Link href="/profile" passHref>
+                <Image
+                  src={session.user.image}
+                  alt=""
+                  height={30}
+                  width={30}
+                  className="ocultar"
+                ></Image>
               </Link>
+              <Typography
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                mb={100}
+                color="secondary"
+              >
+                <Link href="/api/auth/signout" passHref>
+                  {<LogoutIcon />}
+                </Link>
               </Typography>
-              </Stack>
-            )}
+            </Stack>
+          ) : (
+            <Stack
+              direction="row"
+              spacing={3}
+              justifyContent="space-between"
+              mt={2}
+              mb={2}
+              mr={10}
+              display="flex"
+              alignItems="center"
+            >
+              <Typography ml={5}>
+                <Link href="/api/auth/signin" passHref>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    startIcon={<PersonIcon />}
+                  >
+                    Perfil
+                  </Button>
+                </Link>
+              </Typography>
+            </Stack>
+          )}
         </Toolbar>
       </Grid>
     </AppBar>
